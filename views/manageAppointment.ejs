@@ -1,0 +1,26 @@
+<%-include("partials/header.ejs")%>
+    <div class="container my-3">
+      <div class="row text-center">
+        <div class="col-6">
+          <div class="container  unacc">
+              <a href="/unAcceptedReq" type="button" class="manageUnAccepted">Pending Requests</a>
+      </div>
+      </div>
+      <div class="col-6">
+        <div class="container  acc">
+              <a href="/acceptedReq" type="button"  class="manageAccepted">Accepted Request</a>
+      </div>
+      </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        <%res.forEach(function(i){%>
+                <div class="col-6">
+                    <h1><%=i.name%></h1>
+                    <h1><%=i.description%></h1> 
+                </div>
+        <%})%>
+    </div>
+    </div>
+    <%-include("partials/footer.ejs")%>

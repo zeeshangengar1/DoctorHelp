@@ -1,0 +1,74 @@
+
+
+    <%-include("partials/header.ejs")%>
+    <div class="container p-2" style="min-height:400px">
+        <div class="row">
+        </div>
+        <div class="container ">
+            <div class="row">
+                <%res.forEach(function(i){%>
+                    <div class="col-lg-6 col-12 my-4">
+                        <div class="patient_card p-4 ">
+                            <div class="d-flex flex-column"><span class="p_head">Patient's Name :</span>
+                                <h4 class="fs-3 text-dark">
+                                    <%=i.name%>
+                                </h4>
+                            </div>
+                            <div>
+                                <table class="table table-borderless table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex flex-column"> <span class="p_head">Age :</span> <span
+                                                        class=" text-dark"><%=i.age%></span> </div>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex flex-column"> <span class="p_head">Mobile :</span> <span
+                                                        class="text-dark">
+                                                        <%=i.mobile%>
+                                                    </span> </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="d-flex flex-column"> <span class="p_head">Email :</span> <span
+                                                        class="text-dark">
+                                                        <%=i.email%>
+                                                    </span> </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="d-flex flex-column"> <span class="p_head">Clinic :</span>
+                                                    <span class="text-dark ">
+                                                        <%=i.clinic%>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="d-flex flex-column"> <span class="p_head">Description :</span>
+                                                    <span class="text-dark ">
+                                                        <%=i.description%>
+                                                    </span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="d-flex flex-column"> <span class="p_head">Date and Time of Appointment</span> <span
+                                                        class="text-dark"><%=i.date%></span> </div>
+                                            </td>
+                                        </tr>
+                                
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <%})%>
+            </div>
+        </div>
+    </div>
+    <%-include("partials/footer.ejs")%>

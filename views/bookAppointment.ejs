@@ -1,0 +1,67 @@
+<%-include("partials/header.ejs")%>
+<div class="container-fluid px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3>
+                Make an appointment
+            </h3>
+            <p class="blue-text">Fill the following form to reach us and request an appointment</p>
+            <div class="card p-3">
+                
+                <form class="form-card " method="POST" action="/make-appointment">
+            
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                        <label class="form-control-label px-3">Full Name<span class="text-danger"> *</span>
+                        </label> 
+                        <input required type="text" id="fname" name="name" placeholder="Enter your full name" > 
+                    </div>
+
+                    <div class="form-group col-sm-6 flex-column d-flex"> 
+                        <label class="form-control-label px-3">Age<span class="text-danger"> *</span></label> 
+                        <input required type="text" id="lname" name="age" placeholder="Enter your age" > 
+                    </div>
+
+                    </div>
+
+                    <div class="row justify-content-between text-left">
+
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3">Email<span class="text-danger"> *</span>
+                            </label> 
+                            <input type="text" id="email" name="email" placeholder="Your Email"> 
+                        </div>
+
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                         <label class="form-control-label px-3">Phone number<span class="text-danger"> *</span></label> 
+                          <input type="text" id="mob" name="mobile" placeholder="Your Mobile Number" > 
+                        </div>
+
+                    </div>
+
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-12 flex-column d-flex"> 
+                            <label class="form-control-label px-3">Description<span class="text-danger"> *</span></label> 
+                            <textarea type="text" id="ans" name="description" placeholder="description"></textarea> 
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="form-group col-sm-6 flex-column d-flex align-self-center mb-2">
+                            
+                                <select class="admit_doctor" name="select_doctor">
+                                    <option value="">Select your Clinic</option>
+                                    <%clinics.forEach(function(i){%>
+                                        <option name="clinic" value="<%=i.clinicName%>"><%=i.clinicName%></option>
+                                    <%})%>
+                                </select>
+                                
+                            
+                          </div>
+                        <div class="form-group col-sm-6 flex-column d-flex align-self-center mb-2"> <button type="submit" class="btn-block btn-primary">Send</button> </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%-include("partials/footer.ejs")%>

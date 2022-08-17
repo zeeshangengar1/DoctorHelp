@@ -1,0 +1,373 @@
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Reseting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* home cards */
+.services{
+  text-align: center;
+  margin-top: 50px;
+}
+
+.serv{
+  position: relative;
+  width: 270px;
+  height: 180px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+  transition: 0.3s;
+  padding: 10px 15px;
+  background: #fff;
+  box-sizing: content-box;
+  margin-bottom: 40px;
+  margin-top: 80px;
+}
+
+.serv:hover{
+  height: 400px;
+}
+
+.serv_imgbox{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-60px);
+}
+
+.serv_img{
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+}
+
+.serv_content{
+  padding: 10px 15px;
+  text-align: center;
+  transform: translateY(-250px);
+  opacity: 0;
+}
+
+.serv h2{
+margin-top: 10px;
+}
+.serv:hover h2{
+opacity: 0;
+
+}
+
+.serv:hover .serv_content{
+  opacity: 1;
+  transform: translateY(-220px);
+
+}
+
+
+
+/* home top container */
+.header1
+{
+  background: rgb(177, 177, 177) url('/img/header.png') no-repeat fixed center ;
+  background-size: cover;
+}
+.hero {
+  margin-top:20px;
+  text-align:center;
+}
+
+.hero h1 {
+  color:#233f4d;
+  font-size:40px;
+  margin-top:0;
+  margin-bottom:15px;
+  font-weight:300;
+  line-height:1.4;
+}
+
+.hero p {
+  color:#233f4d;
+  font-size:20px;
+  margin-bottom:30px;
+  font-weight:300;
+}
+
+ 
+@media (min-width:768px) {
+ .hero {
+    margin-top:60px;
+    text-align:left;
+  }
+}
+
+@media (min-width:992px) {
+ .hero h1 {
+    margin-top:190px;
+    margin-bottom:24px;
+    line-height:1.2;
+  }
+}
+
+/* home top buttons */
+.action-button, .action-button:not(.disabled):active
+{
+  border:1px solid #3c6b83;
+  border-radius:40px;
+  color:#233f4d;
+  box-shadow:none;
+  text-shadow:none;
+  padding:.3rem .8rem;
+  background:transparent;
+  transition:background-color 0.25s;
+  outline:none;
+}
+.action-button:hover {
+  color:#fff;
+  background-color: transparent;
+}
+
+
+/* for about */
+.header2
+{
+  background: rgb(251, 247, 247) ;
+  min-height:300px;
+}
+/* for search box */
+
+.wrapper1{
+    max-width: 450px;
+    margin: 15px auto;
+  }
+  
+  .wrapper1 .search-input{
+    background: #fff;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+  }
+  
+  .search-input input{
+    height: 55px;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  .search-input.active input{
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .search-input .autocom-box{
+    padding: 0;
+    opacity: 0;
+    pointer-events: none;
+    max-height: 280px;
+    overflow-y: auto;
+  }
+  
+  .search-input.active .autocom-box{
+    padding: 10px 8px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .autocom-box li{
+    list-style: none;
+    padding: 8px 12px;
+    display: none;
+    width: 100%;
+    cursor: default;
+    border-radius: 3px;
+  }
+  
+  .search-input.active .autocom-box li{
+    display: block;
+  }
+  .autocom-box li:hover{
+    background: #efefef;
+  }
+  
+  .search-input .icon{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    color: #644bff;
+    cursor: pointer;
+  }
+
+
+
+  /* testimonials */
+.testimonial
+{
+  /* background-image: linear-gradient(to right, #f26f6f , #69c6fc);
+   */
+   border: #233f4d solid 2px;
+}
+.car-text
+{
+  color:#253c48;
+}
+
+  /* for footer */
+  .foot
+  {
+    background-color:#262626 ;
+    color:aliceblue;
+    /* position:absolute; */
+  }
+  .foot label{
+    color:#262626 ;
+  }
+
+  
+
+/* buttons in manageappointments */
+.manageAccepted,.manageUnAccepted,.unacc,.acc
+{
+border:none;
+background-color: white;
+text-decoration: none;
+color:black;
+}
+.acc,.unacc{
+  border-bottom: 1px solid black;
+}
+.unacc:hover,.acc:hover
+{
+  color:green;
+  border-bottom: 3px solid green;
+}
+
+.accReq
+{
+  color:green;
+  border-bottom: 3px solid green;
+}
+
+.unAccReq
+{
+  color:green;
+  border-bottom: 3px solid green;
+}
+
+
+
+/* symptomlist */
+.noul
+{
+  list-style-type:none;
+}
+
+
+
+
+
+/* for login */
+
+
+.wrapper {
+    max-width: 350px;
+    min-height: 500px;
+    margin: 80px auto;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+
+.logo {
+    width: 80px;
+    margin: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 3px #5f5f5f,
+        0px 0px 0px 5px #ecf0f3,
+        8px 8px 15px #a7aaa7,
+        -8px -8px 15px #fff;
+}
+
+.wrapper .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555;
+}
+
+.wrapper .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+    /* border: 1px solid red; */
+}
+
+.wrapper .form-field {
+    padding-left: 10px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+}
+
+.wrapper .form-field .fas {
+    color: #555;
+}
+
+.wrapper .btn {
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #03A9F4;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1,
+        -3px -3px 3px #fff;
+    letter-spacing: 1.3px;
+}
+
+.wrapper .btn:hover {
+    background-color: #039BE5;
+}
+
+.wrapper a {
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #03A9F4;
+}
+
+.wrapper a:hover {
+    color: #039BE5;
+}
+
+@media(max-width: 380px) {
+    .wrapper {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px;
+    }
+}

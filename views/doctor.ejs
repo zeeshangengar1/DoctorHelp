@@ -1,0 +1,54 @@
+<%-include("partials/header.ejs")%>
+<div class="container" style="min-height:400px">
+    <div class="row">
+        <h1>Look for Doctors!</h1>
+        <hr>
+    </div>
+    <div class="row ">
+        <div class="col-md-6 col-12 justify-content-center mb-2">
+            <form id="findDoc" action="."  >
+                <label for="medicalIssue" >Enter the city:</label>
+                <br>
+                <input id="medicalIssue" class="input1" type="text" required>
+                <button type="submit" class="btn btn-warning submit1">Submit</button>
+                <!-- <button type="refresh" id="refresh"class="btn btn-primary">Refresh</button> -->
+              </form>
+        </div>
+        <div class="col-md-6 col-12 justify-content-center mb-2">
+            <form id="findDoc1" action="." >
+                <label for="medicalIssue" >Enter the locality:</label>
+                <br>
+                <input id="medicalIssue1" class="input2" type="text" required>
+                <button type="submit" class="btn btn-warning submit2"> Submit</button>
+                <!-- <button type="refresh" id="refresh"class="btn btn-primary">Refresh</button> -->
+              </form>
+        </div>
+    </div>
+    <div class="row">
+      
+            <div class="table-responsive" id="T2">
+              <h3 id="recommend " class="table">Based on your input we recommend the following doctors:</h3>
+              <br>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Qualification</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Locality</th>
+                        <th scope="col">City</th>
+                        <th scope="col">State</th>
+    
+                      </tr>
+                    </thead>
+                    <tbody id="tableID2" class="mx-auto">
+                      
+                    </tbody>
+                  </table>
+            </div>
+            
+
+    </div>
+</div>
+<script src="js/doc.js"></script>
+<%-include("partials/footer.ejs")%>
