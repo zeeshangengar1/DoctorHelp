@@ -213,7 +213,7 @@ app.post('/predict-result',function(req,res)
     process.stdout.on('data',(data)=>
     {
         l=data.toString()
-        l=l.slice(0,l.length-2)
+        l=l.slice(0,l.length-1)
         k=m[l]
         res.render('predictResult',{name:fName+" "+lName,res:l,doc:k})
        
